@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subscribe newsletter</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero-image-wrapper wrapper">
+        <div class="bg-img"><img src="./assets/foto2.jpg" alt="" /></div>
+        <div class="front-img"><img src="./assets/foto2.jpg" alt="" /></div>
+      </div>
+      <div class="content-wrapper wrapper">
+        <nav>
+          <p>
+            No olvides checkear nuestras redes sociales!
+            <a href="#">@agenciaViajes</a>
+          </p>
+          <button>Close</button>
+        </nav>
+        <header>
+          <div class="h2">
+            <h2>subscribete</h2>
+            <div class="header-revealer"></div>
+          </div>
+          <div class="h1">
+            <h1>y explora</h1>
+            <div class="header-revealer"></div>
+          </div>
+          <div class="form-wrapper">
+            <form action="">
+              <input type="text" placeholder="tu email" />
+              <button>suscribete</button>
+            </form>
+            <p>
+              ¡Descubre destinos increíbles, consejos de viaje y ofertas
+              exclusivas! Suscríbete a nuestra newsletter y sé el primero en
+              enterarte de las mejores experiencias para tu próxima aventura.
+              ¡No te pierdas esta oportunidad única de explorar el mundo!
+            </p>
+          </div>
+        </header>
+        <footer>
+          <p>Bienvenido al <span>Club</span></p>
+        </footer>
+      </div>
+    </div>
+  </body>
+  <script>
+    gsap.from(".hero-image-wrapper, .content-wrapper, .front-image", 2, {
+      delay: 1,
+      clipPath: "inset(0 100% 0 0)",
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.5,
+      },
+    });
+    gsap.from("img", 3, {
+      delay: 1.5,
+      scale: 2,
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.25,
+      },
+    });
+    gsap.to("header h1, header h2", 1, {
+      delay: 3,
+      top: 0,
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.2,
+      },
+    });
+  </script>
+</html>
